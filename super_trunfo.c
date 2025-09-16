@@ -66,8 +66,7 @@ int main() //int main() indica que a função principal retorna um valor inteiro
     // Cálculo da densidade populacional e PIB per capita para a carta 2
     float densidadePopulacional2 = populacao2 / are2; // Densidade populacional = população / área
     float PIB2 = pib2 / populacao2; // PIB per capita = PIB / populaçãoidade populacional = população / área
-
-    
+ 
     // Imprimir informações da carta 1. A qui é onde as informações são exibidas na tela.
     printf("Carta 1:\n");
     printf("Estado: %c\n,", estado1);
@@ -80,9 +79,7 @@ int main() //int main() indica que a função principal retorna um valor inteiro
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
     printf("PIB per Capita: %.2f rais\n", PIB1);
     printf("\n");
-
-
-    
+  
     // imprimir informações da carta 2. Aqui é onde as informações são exibidas na tela.
     printf("Carta 2:\n");
     printf("Estado: %c\n,", estado2);
@@ -95,6 +92,24 @@ int main() //int main() indica que a função principal retorna um valor inteiro
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
     printf("PIB per Capita: %.2f rais\n", PIB2);
     printf("\n");
-    
+
+    printf("Comparação entre as cartas com base na densidade populacional:\n");
+    printf("\n");
+    printf("Carta 1 - %c: %2.f hab/km²\n",estado1 , densidadePopulacional1);
+    printf("Carta 2 - %c: %2.f hab/km²\n",estado2 , densidadePopulacional2);
+
+    //Estrutura de decisão para determinar qual carta é a vencedora com base na densidade populacional
+    //A carta vencedora é a que tiver a menor densidade populacional.
+    if(densidadePopulacional1 > densidadePopulacional2){//se a densidade populacional da carta 1 for maior que a da carta 2, a carta 1 é a vencedora.
+        printf("Resultado: Carta 2 (%c) com %.2f hab/km² venceu!\n",estado2 ,densidadePopulacional2);
+    }
+        else if (densidadePopulacional1 < densidadePopulacional2){//se a densidade populacional da carta 2 for maior que a da carta 1, a carta 2 é a vencedora.
+        printf("Resultado: Carta 1 (%c) com %.2f hab/km² venceu!\n",estado1 ,densidadePopulacional1);
+    }
+        else {//se as densidades populacionais forem iguais, é declarado um empate.
+        printf("As duas cartas empataram com densidade populacional de %.2f hab/km²\n", densidadePopulacional1);
+
+        }
+
     return 0;//retorna 0 para indicar que o programa terminou com sucesso.
 }   
