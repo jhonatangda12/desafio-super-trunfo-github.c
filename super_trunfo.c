@@ -59,6 +59,14 @@ int main() //int main() indica que a função principal retorna um valor inteiro
     scanf("%d", &pontosturisticos2);
     printf("\n");
 
+    // Cálculo da densidade populacional e PIB per capita para a carta 1
+    float densidadePopulacional1 = populacao1 / are1; // Densidade populacional = população / área
+    float PIB1 = pib1 / populacao1; // PIB per capita = PIB / população
+
+    // Cálculo da densidade populacional e PIB per capita para a carta 2
+    float densidadePopulacional2 = populacao2 / are2; // Densidade populacional = população / área
+    float PIB2 = pib2 / populacao2; // PIB per capita = PIB / populaçãoidade populacional = população / área
+
     
     // Imprimir informações da carta 1. A qui é onde as informações são exibidas na tela.
     printf("Carta 1:\n");
@@ -67,9 +75,13 @@ int main() //int main() indica que a função principal retorna um valor inteiro
     printf("Nome da cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
     printf("Área: %f km²\n", are1);
-    printf("PIB: %f\n", pib1);
+    printf("PIB: %f bilhões de reais\n", pib1);
     printf("Pontos turísticos: %d\n", pontosturisticos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f rais\n", PIB1);
     printf("\n");
+
+
     
     // imprimir informações da carta 2. Aqui é onde as informações são exibidas na tela.
     printf("Carta 2:\n");
@@ -78,8 +90,10 @@ int main() //int main() indica que a função principal retorna um valor inteiro
     printf("Nome da cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %f km²\n", are2);
-    printf("PIB: %f\n", pib2);
+    printf("PIB: %f bilhões de reais\n", pib2);
     printf("Pontos turísticos: %d\n", pontosturisticos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f rais\n", PIB2);
     printf("\n");
     
     return 0;//retorna 0 para indicar que o programa terminou com sucesso.
